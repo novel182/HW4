@@ -1,0 +1,12 @@
+<crew>
+  <crewMember fname="Malcolm" lname="Reynolds" position="Captain" rank="none" />
+  <crewMember fname="Zoe" lname="Washburne" position="First Mate" rank="none" />
+  <crewMember fname="Jayne" lname="Cobb" position="Public Relations" rank="none" />
+  <crewMember fname="Hoban" lname="Washburne" position="Pilot" rank="none" />
+  <crewMember fname="Inara" lname="Serra" position="Ambassador" rank="none" />
+  <crewMember fname="Derrial" lname="Book" position="Shepherd" rank="none" />
+  <crewMember fname="Kaywinnit" lname="Frye" position="Engineer" rank="none" />
+  <crewMember fname="Simon" lname="Tam" position="Doctor" rank="none" />
+  <crewMember fname="River" lname="Tam" position="Psyker" rank="none" />
+  <crewMember fname="Yolanda Saffron Bridget" lname="Unknown" position="Hazard" rank="none" />
+</crew>
