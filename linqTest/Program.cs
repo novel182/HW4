@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Linq;
 
 namespace linqTest
@@ -76,7 +73,6 @@ namespace linqTest
             };
 
             XmlRoster xmlRoster = new XmlRoster(roster);
-            xmlRoster.Print();
 
             CrewMember yoSaffBridge = new CrewMember(
                 "Yolanda Saffron Bridget",
@@ -87,15 +83,15 @@ namespace linqTest
             xmlRoster.AddCrew(yoSaffBridge);
             xmlRoster.Print();
 
-            /*
-            XmlDocument serenity = xmlRoster.GetXmlRoster();
-
-            IEnumerable<CrewMember> tams = from crew in serenity.FirstChild.
-                                           select crew;
-            */
-            string filename = "serenity.xml";
-            xmlRoster.Write(filename);
-            XElement serenity = XElement.Parse(filename);
+            XElement serenity = xmlRoster.GetXmlRoster();
+            Console.WriteLine(serenity);
+            IEnumerable<XElement> tams = from crew in serenity.Descendants("crewMember")
+                                         where (string)crew.Attribute("Lname") == "Tam"
+                                         select crew;
+            Console.WriteLine("Found {0} Tams. Two by two, hands of blue...", tams.Count());
+            foreach (XElement tam in tams) {
+                Console.WriteLine(tam);
+            }
         }
     }
 }

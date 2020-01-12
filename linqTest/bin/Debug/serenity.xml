@@ -1,12 +1,13 @@
-<crew>
-  <crewMember fname="Malcolm" lname="Reynolds" position="Captain" rank="none" />
-  <crewMember fname="Zoe" lname="Washburne" position="First Mate" rank="none" />
-  <crewMember fname="Jayne" lname="Cobb" position="Public Relations" rank="none" />
-  <crewMember fname="Hoban" lname="Washburne" position="Pilot" rank="none" />
-  <crewMember fname="Inara" lname="Serra" position="Ambassador" rank="none" />
-  <crewMember fname="Derrial" lname="Book" position="Shepherd" rank="none" />
-  <crewMember fname="Kaywinnit" lname="Frye" position="Engineer" rank="none" />
-  <crewMember fname="Simon" lname="Tam" position="Doctor" rank="none" />
-  <crewMember fname="River" lname="Tam" position="Psyker" rank="none" />
-  <crewMember fname="Yolanda Saffron Bridget" lname="Unknown" position="Hazard" rank="none" />
-</crew>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Crew>
+  <crewMember Fname="Malcolm" Lname="Reynolds" Position="Captain" Rank="none" />
+  <crewMember Fname="Zoe" Lname="Washburne" Position="First Mate" Rank="none" />
+  <crewMember Fname="Jayne" Lname="Cobb" Position="Public Relations" Rank="none" />
+  <crewMember Fname="Hoban" Lname="Washburne" Position="Pilot" Rank="none" />
+  <crewMember Fname="Inara" Lname="Serra" Position="Ambassador" Rank="none" />
+  <crewMember Fname="Derrial" Lname="Book" Position="Shepherd" Rank="none" />
+  <crewMember Fname="Kaywinnit" Lname="Frye" Position="Engineer" Rank="none" />
+  <crewMember Fname="Simon" Lname="Tam" Position="Doctor" Rank="none" />
+  <crewMember Fname="River" Lname="Tam" Position="Psyker" Rank="none" />
+  <crewMember Fname="Yolanda Saffron Bridget" Lname="Unknown" Position="Hazard" Rank="none" />
+</Crew>

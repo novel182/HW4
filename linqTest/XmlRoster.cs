@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+using System.Xml.Linq;
 
 namespace linqTest
 {
     class XmlRoster
     {
         List<CrewMember> roster;
-        XmlDocument xmlRoster;
+        XElement xmlRoster;
         bool rosterUpToDate;
 
         public XmlRoster() {
@@ -21,7 +18,7 @@ namespace linqTest
             this.roster = roster;
         }
 
-        public XmlDocument GetXmlRoster() {
+        public XElement GetXmlRoster() {
             if (!rosterUpToDate)
             {
                 GenerateXmlRoster();
@@ -53,27 +50,24 @@ namespace linqTest
         }
 
         public void GenerateXmlRoster() {
-            XmlDocument doc = new XmlDocument();
-            XmlNode rootNode = doc.CreateElement("crew");
-            doc.AppendChild(rootNode);
+            XElement doc = new XElement("Crew");
 
             foreach (CrewMember crewMember in roster) {
-                XmlNode crewMemberNode = doc.CreateElement("crewMember");
-                XmlAttribute fname = doc.CreateAttribute("fname");
-                fname.Value = crewMember.Fname;
-                crewMemberNode.Attributes.Append(fname);
-                XmlAttribute lname = doc.CreateAttribute("lname");
-                lname.Value = crewMember.Lname;
-                crewMemberNode.Attributes.Append(lname);
-                XmlAttribute position = doc.CreateAttribute("position");
-                position.Value = crewMember.Position;
-                crewMemberNode.Attributes.Append(position);
-                XmlAttribute rank = doc.CreateAttribute("rank");
-                rank.Value = crewMember.Rank;
-                crewMemberNode.Attributes.Append(rank);
-                rootNode.AppendChild(crewMemberNode);
+                XElement crewMemberNode = new XElement("crewMember");
+                crewMemberNode.Add(new XAttribute(
+                    "Fname", crewMember.Fname
+                    ));
+                crewMemberNode.Add(new XAttribute(
+                    "Lname", crewMember.Lname
+                    ));
+                crewMemberNode.Add(new XAttribute(
+                    "Position", crewMember.Position
+                    ));
+                crewMemberNode.Add(new XAttribute(
+                    "Rank", crewMember.Rank
+                    ));
+                doc.Add(crewMemberNode);
             }
-
             xmlRoster = doc;
             rosterUpToDate = true;
         }
@@ -81,15 +75,15 @@ namespace linqTest
         public void Print()
         {
             string sep = new string('=', 35);
-            string title = "Current Crew";
+            string title = " Current Crew ";
             string filler = new string('=', title.Length);
             if (!rosterUpToDate)
             {
                 GenerateXmlRoster();    
             }
             Console.WriteLine("{0}{1}{0}", sep, title);
-            foreach (XmlNode child in xmlRoster.ChildNodes[0].ChildNodes) {
-                Console.WriteLine(child.OuterXml);
+            foreach (XElement child in xmlRoster.Descendants()) {
+                Console.WriteLine(child.ToString());
             }
             Console.WriteLine("{0}{1}{0}", sep, filler);
         }
