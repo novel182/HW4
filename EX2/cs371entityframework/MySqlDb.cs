@@ -67,9 +67,9 @@ namespace cs371entityframework
             List<Roster> result = new List<Roster>();
             string sql = "select c.fname, c.lname, c.age, rol.role, s.name, s.registration "
                 + "from crew as c "
-                + "join role as rol on c.roleid = rol.id"
-                + "join roster as ros on c.id = ros.crewid"
-                + "join ship as s on s.id = ros.shipid";
+                + "join roles as rol on c.roleid = rol.id "
+                + "join roster as ros on c.id = ros.crewid "
+                + "join ships as s on s.id = ros.shipid";
             using(MySqlCommand cmd = new MySqlCommand())
             {
                 cmd.CommandText = sql;
@@ -100,10 +100,10 @@ namespace cs371entityframework
             List<Roster> result = new List<Roster>();
             string sql = "select c.fname, c.lname, c.age, rol.role, s.name, s.registration "
                 + "from crew as c "
-                + "join role as rol on c.roleid = rol.id"
-                + "join roster as ros on c.id = ros.crewid"
-                + "join ship as s on s.id = ros.shipid"
-                + "where ros.pilotQualified = 1";
+                + "join roles as rol on c.roleid = rol.id "
+                + "join roster as ros on c.id = ros.crewid "
+                + "join ships as s on s.id = ros.shipid "
+                + "where rol.pilotQualified = 1";
             using (MySqlCommand cmd = new MySqlCommand())
             {
                 cmd.CommandText = sql;

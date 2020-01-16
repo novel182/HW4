@@ -1,5 +1,5 @@
 ﻿// Novel Poudel
-// Worked With : Sabin Sapkota & Bishesh Tuladhar
+// Worked With : Sabin Sapkota & Bishesh Tuladhar & Pukar Mahat
 
 using System;
 using System.Collections.Generic;
@@ -136,8 +136,10 @@ namespace linqTest
             Console.WriteLine();
 
             //Query to calculate the average age of the crew
-            var AvgAge = from crew in serenity.Descendants("crewMember")
-                         select ((string)crew.Attribute("Age"));
+            //Changed the following code to an extension based query because the question asked for at least one
+            var AvgAge = serenity.Descendants("crewMember").Select(c => (string)c.Attribute("Age"));
+            //var AvgAge = from crew in serenity.Descendants("crewMember")
+            //             select ((string)crew.Attribute("Age"));
             double avg = 0;
             foreach (var A in AvgAge)
             {

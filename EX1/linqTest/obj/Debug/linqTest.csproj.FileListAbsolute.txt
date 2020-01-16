@@ -11,3 +11,9 @@ C:\Users\Bishesh\hw4\Hw4_Ex1\linqTest\bin\Debug\linqTest.pdb
 C:\Users\Bishesh\hw4\Hw4_Ex1\linqTest\obj\Debug\linqTest.csprojAssemblyReference.cache
 C:\Users\Bishesh\hw4\Hw4_Ex1\linqTest\obj\Debug\linqTest.exe
 C:\Users\Bishesh\hw4\Hw4_Ex1\linqTest\obj\Debug\linqTest.pdb
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\bin\Debug\linqTest.exe.config
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\bin\Debug\linqTest.exe
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\bin\Debug\linqTest.pdb
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\obj\Debug\linqTest.csprojAssemblyReference.cache
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\obj\Debug\linqTest.exe
+D:\courses\2020 Jan\Windows app dev\Homeworks\HW4\EX1\linqTest\obj\Debug\linqTest.pdb
